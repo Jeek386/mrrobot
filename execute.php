@@ -21,9 +21,9 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 {
 	$response = "Ciao $firstname, benvenuto!";
 }
-elseif($text=="domanda 1")
+elseif($text=="come mi chiamo?")
 {
-	$response = "risposta 1";
+	$response = "Il tuo nome è $fristname";
 }
 elseif($text=="domanda 2")
 {
