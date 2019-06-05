@@ -25,9 +25,9 @@ elseif($text=="come mi chiamo?")
 {
 	$response = "Il tuo nome è $firstname";
 }
-elseif($text=="domanda 2")
+elseif($text=="indirizzo repo interporto")
 {
-	$response = "risposta 2";
+	$response = "Da Explorer recarsi nel percorso di rete \\yoox.net\yhelpdesk\HelpdeskITA\Interporto\HD";
 }
 else
 {
