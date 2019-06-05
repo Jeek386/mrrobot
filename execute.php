@@ -12,52 +12,27 @@ $firstname = isset($message['chat']['first_name']) ? $message['chat']['first_nam
 $lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name'] : "";
 $username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
 $date = isset($message['date']) ? $message['date'] : "";
+$text = isset($message['text']) ? $message['text'] : "";
+$text = trim($text);
+$text = strtolower($text);
+header("Content-Type: application/json");
 $response = '';
-if(isset($message['text']))
+if(strpos($text, "/start") === 0 || $text=="ciao")
 {
-	$response = "Ho ricevuto il seguente messaggio di testo: " . $message['text'];
+	$response = "Ciao $firstname, benvenuto!";
 }
-elseif(isset($message['audio']))
+elseif($text=="domanda 1")
 {
-	$response = "Ho ricevuto un messaggio audio";
+	$response = "risposta 1";
 }
-elseif(isset($message['document']))
+elseif($text=="domanda 2")
 {
-	$response = "Ho ricevuto un messaggio document";
-}
-elseif(isset($message['photo']))
-{
-	$response = "Ho ricevuto un messaggio photo";
-}
-elseif(isset($message['sticker']))
-{
-	$response = "Ho ricevuto un messaggio sticker";
-}
-elseif(isset($message['video']))
-{
-	$response = "Ho ricevuto un messaggio video";
-}
-elseif(isset($message['voice']))
-{
-	$response = "Ho ricevuto un messaggio voice";
-}
-elseif(isset($message['contact']))
-{
-	$response = "Ho ricevuto un messaggio contact";
-}
-elseif(isset($message['location']))
-{
-	$response = "Ho ricevuto un messaggio location";
-}
-elseif(isset($message['venue']))
-{
-	$response = "Ho ricevuto un messaggio venue";
+	$response = "risposta 2";
 }
 else
 {
-	$response = "Ho ricevuto un messaggio ?";
+	$response = "Comando non valido!";
 }
-header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
