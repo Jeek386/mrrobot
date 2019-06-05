@@ -19,8 +19,8 @@ header("Content-Type: application/json");
 $response = '';
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
-	$response = "Ciao $firstname, benvenuto!"; 		or
-	$response = "Grazie per essere quì $firstname";
+	$response = "Ciao $firstname, benvenuto!"; 		
+	or "Grazie per essere quì $firstname";
 }
 elseif($text=="come mi chiamo?")
 {
