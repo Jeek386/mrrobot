@@ -23,7 +23,7 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 }
 elseif($text=="come mi chiamo?")
 {
-	$response = "Il tuo nome è $fristname";
+	$response = "Il tuo nome è $firstname";
 }
 elseif($text=="domanda 2")
 {
