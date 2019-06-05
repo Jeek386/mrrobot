@@ -27,7 +27,7 @@ elseif($text=="come mi chiamo?")
 }
 elseif($text=="indirizzo repo interporto")
 {
-	$response = "Da Explorer recarsi nel percorso di rete \\yoox.net\yhelpdesk\HelpdeskITA\Interporto\HD";
+	$response = "Da Explorer recarsi nel percorso di rete \\\yoox.net\yhelpdesk\HelpdeskITA\Interporto\HD";
 }
 else
 {
