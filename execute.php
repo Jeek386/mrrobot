@@ -29,6 +29,10 @@ elseif($text=="indirizzo repo interporto")
 {
 	$response = "Da Explorer recarsi nel percorso di rete \\\yoox.net\yhelpdesk\HelpdeskITA\Interporto\HD";
 }
+elseif($text=="beta80")
+{
+	$response = "Forse volevi dire BRANCO DI COGLIONI";
+}
 else
 {
 	$response = "Giovanni non essere precipitoso è solo una beta...";
