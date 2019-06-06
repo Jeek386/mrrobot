@@ -19,7 +19,7 @@ header("Content-Type: application/json");
 $response = '';
 if(strpos($text, "/start") === 0 || $text=="ciao") #test
 {
-	$response = "Ciao $date, benvenuto!";
+	$response = "Ciao $username, benvenuto!";
 }
 elseif($text=="come mi chiamo?")
 {
