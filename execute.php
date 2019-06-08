@@ -33,6 +33,9 @@ elseif($text=="beta80")
 {
 	$response = "Forse volevi dire BRANCO DI COGLIONI";
 }
+elseif($text=="che ore sono?")
+{
+	$response = "sono le $date";
 else
 {
 	$response = "Giovanni non essere precipitoso è solo una beta...";
